@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+:root {
+    --main-bg: #0b2129;
+    --secondary-bg: #289496;
+    --main-accent: #9affe1;
+}
+
+body {
+    background-color: var(--main-bg) !important;
+    color: white !important; 
+}
+
+h1, h2 {
+    transition: 0.3s ease-in-out;
+}
+
+h2:hover, h1:hover {
+    color: var(--main-accent) !important;
+    transform: translateX(-15px);
+    letter-spacing: -1px;
+    cursor: pointer;
+}
+
+section {
+    min-height: 50vh;
+}
+
+a {
+    text-decoration: none !important;
+    color: var(--main-accent) !important;
+}
+
+.navbar-brand {
+    color: var(--main-accent) !important;
+}
+
+.nav-link {
+    color: var(--main-accent) !important;
+}
+
+.btn {
+    color: var(--main-accent) !important;
+    border: none !important;
+    background: none !important;
+}
+
+.nav-item-active a {
+    position: relative;
+    padding-bottom: 4px; 
+}
+
+.nav-item-active a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 95%;
+    height: 1px;
+    background-color: white; 
+    transform-origin: 100%;
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+
+.nav-item-active a:hover::before {
+    transform-origin: 0%;
+    transform: scaleX(0);
+}  
+  
+  
+.navbarScroll.navbarDark {
+    background-color: var(--secondary-bg) !important;
+}
+
+
+
+.landing-image {
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+.landing_title {
+    font-size: 4.5rem;
+}
+.landing_desc {
+    font-size: 2rem;
+}
+.landing-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#particles-js canvas {
+    display: block;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity 0.8s ease, -webkit-transform 1.4s ease;
+    transition: opacity 0.8s ease, transform 1.4s ease;
+  }
+    
+  #particles-js {
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+
+.typing {
+    color: var(--main-accent);
+}
+
+h4 {
+    text-align: center;
+}
+
+.icon {
+    color: var(--main-accent) !important;
+    transition: 0.1s cubic-bezier(0.42, 0, 0.99, 0.17) !important;
+}
+
+.icon:hover {
+    opacity: 70% !important;
+    transform: translateY(-6px) !important;
+}
+
+@media screen and (max-width: 990px) {
+    .card-img-top {
+        max-width: 50% !important;
+        object-fit: contain !important;
+    }
+}
